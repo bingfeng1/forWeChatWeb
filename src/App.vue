@@ -6,17 +6,40 @@
 </template>
 
 <script>
-import BottomBtn from '@/views/BottomBtn.vue'
+import BottomBtn from "@/views/BottomBtn.vue";
 export default {
   name: "app",
   components: {
     BottomBtn
   },
-  // computed:{
-  //   isLoading(){
-  //     return this.$store.state.isLoading
-  //   }
-  // }
+  mounted() {
+    // 获取用户信息
+    let openid = "oPYNR1fXfbaq98L-c2lhwbIbE5Sw";
+    const search = window.location.search;
+    let that = this;
+    this.$http
+      .get("web/getUserToken", {
+        params: {
+          search,
+          openid
+        }
+      })
+      .then(data=>{
+        let result = data.data;
+        let {
+          nickname,
+          sex,
+          province,
+          city,
+          country,
+          headimgurl,
+          privilege,
+          unionid,
+          openid
+        } = result;
+        that.$store.dispatch("setUserInfo",result)
+      });
+  }
 };
 </script>
 
