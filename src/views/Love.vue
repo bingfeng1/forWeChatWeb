@@ -281,10 +281,9 @@ export default {
         context.font = "1rem bold 黑体";
         context.fillText("我很天真，也很害羞", canvas.width/2, canvas.width/2+40);
         context.fillText("大部分我不知道该怎么去表达", canvas.width/2, canvas.width/2+60);
-        context.fillText("感谢与你的相遇，也感谢你的陪伴", canvas.width/2, canvas.width/2+80);
-        context.fillText("马上就七夕了", canvas.width/2, canvas.width/2+100);
         context.font = "2rem bold 黑体";
-        context.fillText("我喜欢你", canvas.width/2, canvas.width/2+150);
+        context.fillText("马上就七夕了", canvas.width/2, canvas.width/2+90);
+        context.fillText("感谢与你相遇", canvas.width/2, canvas.width/2+120);
       }
 
       // handle (re-)sizing of the canvas
