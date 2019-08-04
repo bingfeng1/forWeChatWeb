@@ -1,6 +1,6 @@
 <template>
   <el-row>
-    <el-col :span="24">
+    <el-col :span="24" :style="{marginBottom}">
       <el-card>
         <header slot="header" class="clearfix">
           <span>个人信息</span>
@@ -19,7 +19,8 @@
 export default {
   props: {
     imgUrl: String,
-    name: String
+    name: String,
+    m_bottom: Number
   },
   computed: {
     myImg: function() {
@@ -27,6 +28,9 @@ export default {
     },
     myName: function() {
       return this.name;
+    },
+    marginBottom() {
+      return this.m_bottom + "px";
     }
   }
 };

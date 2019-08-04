@@ -26,17 +26,17 @@ export default {
       })
       .then(data=>{
         let result = data.data;
-        let {
-          nickname,
-          sex,
-          province,
-          city,
-          country,
-          headimgurl,
-          privilege,
-          unionid,
-          openid
-        } = result;
+        // let {
+        //   nickname,
+        //   sex,
+        //   province,
+        //   city,
+        //   country,
+        //   headimgurl,
+        //   privilege,
+        //   unionid,
+        //   openid
+        // } = result;
         that.$store.dispatch("setUserInfo",result)
       });
   }
